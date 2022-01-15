@@ -1,0 +1,71 @@
+body{
+    margin:0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: change 3s ease infinite;
+}
+
+.container{
+    width: 35px;
+    height: 35px;
+    border: 2px solid #000;
+    animation: loading 2s ease infinite;
+    animation-direction: alternate;
+}
+
+.box{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #000;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+.alignment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+@keyframes loading{
+    0%{
+        transform: scale(0)rotate(0);
+    }
+    100%{
+        transform: scale(1)rotate(360deg);
+    }
+}
+
+@keyframes change{
+    0%{
+        background-color: aqua;
+    }
+    20%{
+        background-color: rgb(17, 0, 255);
+    }
+    40%{
+        background-color: rgb(255, 0, 191);
+    }
+    60%{
+        background-color: rgb(223, 68, 21);
+    }
+    80%{
+        background-color: rgb(72, 255, 0);
+    }
+    100%{
+        background-color: aqua;
+    }
+}
